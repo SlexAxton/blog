@@ -1,5 +1,5 @@
 body > header {
-  background: $header-bg;
+  background: $header-bg image-url('noise.png') top left;
   h1 {
     display: inline-block;
     margin: 0;
