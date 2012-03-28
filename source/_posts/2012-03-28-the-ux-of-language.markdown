@@ -216,6 +216,10 @@ While both are likely to be sufficiently fast, I did implement `messageformat.js
 
 My co-worker [Oliver Wong](https://twitter.com/#!/owiber) was able to do a quick port of the Google Closure `NumberFormat.js` to not need Google Closure (under Apache 2).
 
+### EDIT: [moment.js](http://momentjs.com/)
+
+If anyone was wondering how I handle dates in my JS apps, I figured I'd add it here. Moment.js, by [Tim Wood](https://github.com/timrwood) is a library that I lean on a lot. There are plenty of additional internationalization libraries that I could start adding (for collation and rtl, etc), but for right now, the built in localization, and friendly `ago` syntax of moment.js make for a great user experience around dates.
+
 ### All Together Now
 
 I plan on updating Jed to actually contain this group of tools rather than the Gettext ones. I think these tools better suit the needs of modern applications. I will certainly keep the old Jed (Gettext) code around for those that require that format. It's not terribly difficult to integrate with these tools separately now, though.
