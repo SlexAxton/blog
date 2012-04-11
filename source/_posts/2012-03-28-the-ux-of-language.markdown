@@ -7,7 +7,7 @@ categories: ["javascript", "large apps", "i18n", "jed"]
 ---
 
 
-I once read a tweet that I haven't been able to attribute back to its original source, but said something along the lines of
+I once read a tweet ~~that I haven't been able to attribute back to its original source~~ ([Paul Irish](http://paulirish.com/) has sleuthed and found the original source to be a [Greg Brockman tweet](https://twitter.com/#!/thegdb/statuses/148293778019581952)), but said something along the lines of
 
 > Web development is the art of finding more complex ways to concatenate strings together.
 
