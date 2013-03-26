@@ -40,18 +40,18 @@ in a single place, and that place probably isn't in the order of your script tag
 ### Loading what you need is better than byte shaving
 
 One technique at the build-stage that is ideal for performance, is building minimal packages based on likely use. At page load, you'll want
-to load, parse, and execute as little JavaScript as possible. Require.js allows me to "exclude" modules from my builds and 
+to load, parse, and execute as little JavaScript as possible. Require.js allows you to "exclude" modules from your builds and 
 [create separate secondary modules](https://github.com/requirejs/example-multipage/blob/master/tools/build.js#L8-L45). Rather than shaving bytes
 in your app files, you can avoid loading entire sections of code. Most sections of an app have predictable entry points that you can listen for
 before injecting more functionality.
 
-In my current app, only a fraction of the users click on the button that causes a specific flow to popup. Because of this we can
+In our current app, only a fraction of the users click on the button that causes a specific flow to popup. Because of this we can
 save ~20kb of code at page load time, and instead load it as a mouse gets close to the button, or after a few seconds of inactivity (to prime the cache).
 This technique will go a much longer way than any of your normal byte saving tricks, but is not always the easiest and for that reason is often avoided.
 
 ![/images/js_app_deploy/delaypackage.gif](/images/js_app_deploy/delaypackage.gif)
 
-Check your network panel the next time you have gmail open to see how
+Check your network panel the next time you have Gmail open to see how
 [Google feels about this technique](http://googlecode.blogspot.com/2009/09/gmail-for-mobile-html5-series-reducing.html). They take an extra
 step and bring the code in as text, and don't bother parsing or executing it until they need to. This is good for low-powered/mobile devices.
 
@@ -66,10 +66,10 @@ until you need to do cross domain form POSTs.
 
 ### Don't penalize modern users
 
-I'm all for progressive enhancement, and have to support IE6 in my primary application. However, it pains me when modern browser users have to pay
+I'm all for progressive enhancement, and have to support IE6 in our primary application. However, it pains me when modern browser users have to pay
 a performance price for the sins of others. It's a good idea to try to support some level of "conditional builds" or "profile builds." In the
-AMD world, I can use the has.js integration, or if I'm feeling especially dirty, a build pragma. However, third-parties have written some pretty
-nifty tools for doing this as a plugin.
+AMD world, you can use the [has.js integration](http://requirejs.org/docs/optimization.html#hasjs), or if you're feeling especially dirty, a build pragma. 
+However, third-parties have written some pretty nifty tools for doing this as a plugin.
 
 One of the best tools for this that I've seen is [AMD-feature](https://github.com/jensarps/AMD-feature). It allows you
 to use a set of known supported features to load the best fitting build for the current user. This can be great on mobile. You can silently switch
@@ -137,21 +137,21 @@ application).
 
 ![/images/js_app_deploy/pictos.png](/images/js_app_deploy/pictos.png)
 
-I inline fonts as data URIs for supporting browsers. Then I fallback to referencing separate files (at the cost of a request), and then I fallback
-to images (as separate requests). This means I end up with different builds of my CSS files. Each CSS build only includes one of the techniques,
+First, we inline fonts as data URIs for supporting browsers. Then we fallback to referencing separate files (at the cost of a request), and then we fallback
+to images (as separate requests). This means we end up with different builds of our CSS files. Each CSS build only includes one of the techniques,
 so no one user is penalized by the way another browser might need fonts. The [Filament Group](http://filamentgroup.com/) has a tool for this called
 [Grunticon](https://github.com/filamentgroup/grunticon). I'd highly recommend this technique. For every modern browser, you have a single
 request for all styles and icons, with no additional weight from old IEs that don't support data-URIs.
 
 #### CSS Files
 
-When I update my JavaScript files, I have usually made a change to the CSS as well. So these files usually have the same update times. For that
+When you update update your JavaScript files, you have usually made a change to the CSS as well. So these files usually have the same update times. For that
 reason it's pretty safe to package them together.
 
-As part of my build step, I first build my necessary CSS for my package into a file (for me: styles are dependencies of templates,
-which are dependencies of views, which are dependencies of the separate module packages I'm loading, so this is an automatic step). Then I
-read this file in, minify it, and inject it as a string in my JavaScript file. Because you have control over when the templates are
-rendered, you can just inject the css into a style tag before rendering the template. I have to render on the serverside occasionally, as well,
+So, as part of our build step, we first build our necessary CSS for our package into a file (for Bazaarvoice: styles are dependencies of templates,
+which are dependencies of views, which are dependencies of the separate module packages we're loading, so this is an automatic step). Then we
+read this file in, minify it, and inject it as a string in our main JavaScript file. Because you have control over when the templates are
+rendered, you can just inject the css into a style tag before rendering the template. We have to render on the serverside occasionally, as well,
 and in these cases I would recommend against this technique to avoid a flash of unstyled content.
 
 ```JavaScript
@@ -173,12 +173,12 @@ else {
 head.appendChild(style);
 ```
 
-Since I inline the fonts and icons into my CSS files, and then inline the CSS into my JS file (of which only 1 is injected on load), I end up with
-a single packaged app that contains fonts, icons, styles, and application logic. The only other request will be necessary media, and the data (we'll
+Since we inline the fonts and icons into our CSS files, and then inline the CSS into our JS file (of which only 1 is injected on load), we end up with
+a single packaged app that contains fonts, icons, styles, and application logic. The only other request will be necessary media and the data (we'll
 get to those).
 
-You may notice that I now have a couple of combinations of packages. **Yep.** If I have 3 ways to load fonts/icons multiplied by the number of
-build profiles that I chose to create (mobile, oldIE, touch, etc), I can get 10-20 combinations fast. I consider this a really good thing. When you
+You may notice that we now have a couple of combinations of packages. **Yep.** If we have 3 ways to load fonts/icons multiplied by the number of
+build profiles that we chose to create (mobile, oldIE, touch, etc), we can get 10-20 combinations fast. I consider this a really good thing. When you
 generate them, have some consistent way of naming them, and we'll be able to choose our _exact_ needed app for a user, rather than a lot of extra
 weight for other users.
 
@@ -268,8 +268,8 @@ headers on your built files to **forever**. Any changes will get pushed as a dif
 files should be guaranteed to never change. The only exception to this rule is the **Scout File**, which lives *outside* of the build folders in the root
 directory.
 
-The scout file for my third-party app is a very small JS file that contains a build number and a bit of JavaScript to determine the  build profile
-that needs to be loaded. It also contains the minimum amount of code to determine the initial data that I'm going to need for a page. It doesn't
+The scout file for our third-party app is a very small JS file that contains a build number and a bit of JavaScript to determine the  build profile
+that needs to be loaded. It also contains the minimum amount of code to determine the initial data that we're going to need for a page. It doesn't
 have jQuery, or really any dependencies, it just does exactly what it needs to do. This file is cached for about 5 minutes (should be relatively short, but
 close to the average session length).
 
@@ -301,8 +301,8 @@ means the dynamic parts of your site would come from a subdomain like `api.mysit
 a very nice win for performance since you've inlined a scout file to immediately load the rest of the app in parallel.
 
 The smart peeps at [Nodejitsu](http://nodejitsu.com/) put out [Blacksmith](http://blacksmith.jit.su/) to help with static site generation a while
-back, but there are [plenty of options](http://blog.bmannconsulting.com/node-static-site-generators/). Many of my apps are single page apps with
-only an `index.html` file anyways, so I can skip the static generation all together.
+back, but there are [plenty of options](http://blog.bmannconsulting.com/node-static-site-generators/). Many apps are single page apps with
+only an `index.html` file anyways, so you can skip the static generation all together.
 
 ### All this together
 
