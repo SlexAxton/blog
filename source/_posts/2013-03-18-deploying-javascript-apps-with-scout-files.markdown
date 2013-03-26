@@ -114,7 +114,7 @@ define(['feature!dropdown'], function(dropdown){
 
 ### One less jpeg
 
-Lots of people like repeating this one. I think [Paul Irish](http://paulirish.com/) coined it, but the idea is if that if you loaded one less jpeg on your
+Lots of people like repeating this one. ~~I think [Paul Irish](http://paulirish.com/) coined it~~ [Adam J Sontag](http://twitter.com/ajpiano) naturally coined it, but the idea is if that if you loaded one less jpeg on your
 site, you could fit in quite a bit of unshaved JavaScript in its place. Consider this the next time you are sacrificing readability or compatibility for file size.
 
 ![/images/js_app_deploy/onelessjpg.gif](/images/js_app_deploy/onelessjpg.gif)
@@ -137,11 +137,11 @@ application).
 
 ![/images/js_app_deploy/pictos.png](/images/js_app_deploy/pictos.png)
 
-I inline fonts as data uris for supporting browsers. Then I fallback to referencing separate files (at the cost of a request), and then I fallback
+I inline fonts as data URIs for supporting browsers. Then I fallback to referencing separate files (at the cost of a request), and then I fallback
 to images (as separate requests). This means I end up with different builds of my CSS files. Each CSS build only includes one of the techniques,
 so no one user is penalized by the way another browser might need fonts. The [Filament Group](http://filamentgroup.com/) has a tool for this called
 [Grunticon](https://github.com/filamentgroup/grunticon). I'd highly recommend this technique. For every modern browser, you have a single
-request for all styles and icons, with no additional weight from old IEs that don't support data-uris.
+request for all styles and icons, with no additional weight from old IEs that don't support data-URIs.
 
 #### CSS Files
 
@@ -282,7 +282,7 @@ and our data. This is going to be tough for some folks, but it's a huuuge perfor
 We use node.js to run our models at build time. We feed in each of the "page types" that we know how to handle. For each of these page types, each model registers
 its intent to load data, and we build up a hash of data that is needed for each page type and stick that into the scout file.
 
-Then we had our api folk create a batch api so we can make multiple data requests at once. We use this hash of needed data for each page type (we have less than
+Then we had our API folk create a batch API so we can make multiple data requests at once. We use this hash of needed data for each page type (we have less than
 10 page types, and you probably do too) in order to fire off a single request for the data that **all** the models will need, before they are loaded. Unfortunately
 the way to do this changes drastically based on your framework, but it's worth your time!
 
@@ -365,4 +365,4 @@ of time. Naturally the more common tips of not going overboard with external lib
 page response are all ways to change the performance (usually for the better), but this architecture fits well with many of today's more app-like deployments.
 
 There's something really comforting about exposing a minimal dynamic API that needs to be fast and having everything else served out of memory from nearby
-static servers. You should do totally try it.
+static servers. You should totally try it.
