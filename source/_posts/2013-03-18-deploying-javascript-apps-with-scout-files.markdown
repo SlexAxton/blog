@@ -2,7 +2,7 @@
 layout: post
 published: false
 title: "Deploying JavaScript Applications"
-permalink: /blog/2013/03/deploying-JavaScript-applications
+permalink: /blog/2013/03/deploying-javascript-applications
 date: 2013-03-26 23:37
 comments: true
 categories: ["JavaScript", "performance"]
@@ -33,10 +33,10 @@ Locally, you might run a static server with some [AMD modules](http://requirejs.
 in front of some [sass](http://sass-lang.com/) and [coffeescript](http://coffeescript.org/), or [browserify](http://browserify.org/) with
 [commonjs modules](http://wiki.commonjs.org/wiki/Modules/1.1). Whatever you're doing in development is your choice and not the topic du jour.
 
-The hope is that you have a way to take your dev environment files and wrapping them up into concisely built and minified JavaScript
+The hope is that you have a way of taking your dev environment files and wrapping them up into concisely built and minified JavaScript
 and css files. Ideally this is an [easy step](http://requirejs.org/docs/optimization.html#basics) for you, otherwise, you'll tend to skip it.
 *Optimize for ease of mind here.* I tend to disagree with the sentiment that *'script tags are enough.'* Try to manage your dependencies
-in a single place, and that place probably isn't in the order of your script tags in your html. Avoiding this step is easy until it isn't.
+in a single place, and that place probably isn't in the order of your script tags in your HTML. Avoiding this step is easy until it isn't.
 
 ### Loading what you need is better than byte shaving
 
@@ -56,9 +56,9 @@ Check your network panel the next time you have gmail open to see how
 [Google feels about this technique](http://googlecode.blogspot.com/2009/09/gmail-for-mobile-html5-series-reducing.html). They take an extra
 step and bring the code in as text, and don't bother parsing or executing it until they need to. This is good for low-powered/mobile devices.
 
-In fact, some Googler's released a library, [Module Server](https://github.com/google/module-server), that allows you to do some of this dynamically.
+In fact, some Googlers released a library, [Module Server](https://github.com/google/module-server), that allows you to do some of this dynamically.
 It works with lots of module formats. And technically you could just use it to see how it decides to break up your files, and then switch
-over to fully static files after you get that insight. They presented on it at JSConf.eu 2013:
+over to fully static files after you get that insight. They presented on it at JSConf.eu 2012:
 
 {% youtube mGENRKrdoGY %}
 
@@ -136,6 +136,8 @@ characters to map to the icons, but it can sometimes be a stretch. Drew Wilson's
 to get going with this technique, though I might suggest buying a font pack in the end for maximum performance (so you can package it with your
 application).
 
+![/images/js_app_deploy/pictos.png](/images/js_app_deploy/pictos.png)
+
 I inline fonts as data uris for supporting browsers. Then I fallback to referencing separate files (at the cost of a request), and then I fallback
 to images (as separate requests). This means I end up with different builds of my CSS files. Each CSS build only includes one of the techniques,
 so no one user is penalized by the way another browser might need fonts. The [Filament Group](http://filamentgroup.com/) has a tool for this called
@@ -189,7 +191,7 @@ The **Scout File** or **Scout Script** is the portion of JavaScript that decides
 every process that can happen in parallel, has a low cache time, and is as small as possible.
 
 It gets its name from being a small entity that looks out of the cache from time to time to warn the everybody else that things have
-changed. It's 'scouting' for an app update.
+changed. It's 'scouting' for an app update and gathering data.
 
 ```JavaScript
 // Simplified example of a scout file
@@ -262,14 +264,14 @@ on top of it is an easy choice. The [Grunt S3 Plugin](https://github.com/pifanta
 Bazaarvoice has an Akamai contract, so we tend to use them, but the idea is that you are getting your built files onto servers that are geographically
 close to your users. It's easy and cheap. Don't skimp! Latency is king.
 
-Now that you have an app on a static CDN, make sure it gets served gzipped (where appropriate, grunt-s3 can help with this), set the cache
+Now that you have an app on a static CDN, make sure it gets served gzipped (where appropriate, grunt-s3 can help with this), and then set the cache
 headers on your built files to **forever**. Any changes will get pushed as a different set of built files in a totally different folder, these
 files should be guaranteed to never change. The only exception to this rule is the **Scout File**, which lives *outside* of the build folders in the root
-director.
+directory.
 
-The scout file for my third-party app is a very small JS file that contains a build number and a bit of JavaScript to determine the profile
+The scout file for my third-party app is a very small JS file that contains a build number and a bit of JavaScript to determine the  build profile
 that needs to be loaded. It also contains the minimum amount of code to determine the intial data that I'm going to need for a page. It doesn't
-have jQuery, or really any dependencies, it just does exactly what it needs to. This file is cached for about 5 minutes (should be relatively short, but
+have jQuery, or really any dependencies, it just does exactly what it needs to do. This file is cached for about 5 minutes (should be relatively short, but
 close to the average session length).
 
 ### Parallelizing the initial data request
@@ -290,8 +292,8 @@ the way to do this changes drastically based on your framework, but it's worth y
 If you aren't rendering templates on the server, then there's likely no reason you shouldn't be statically compiling all of your page shells at their
 appropriate urls, and uploading them to a static CDN along with your scripts. This is a _huge_ performance improvement.
 
-Distributing the HTML to geographically close servers can have huge wins towards getting to your actual content more quickly. In the case that you are uploading your static html
-pages up to the static cdn along with your JS Application, your HTML files can become your Scout File. Put a small cache on each static html
+Distributing the HTML to geographically close servers can have big wins towards getting to your actual content more quickly. In the case that you are uploading your static HTML
+pages up to the static cdn along with your JS Application, your HTML files can become your Scout File. Put a small cache on each static HTML
 page and inline the contents that you would have put in a scout file. This serves the same purpose as before, except we've saved a request. The only thing
 that isn't highly cached on a close-by server is the data, and we're already loading that in parallel with our app if we've followed the previous instructions.
 
@@ -331,8 +333,8 @@ The folder structure I normally see is something like:
   |- index.html # or scout.js
 ```
 
-The `index.html` file is the only that changes, everything else is just *added*. If we're a third party, it'd be the `scout.js` file. Everything else has a 30yr cache header.
-We can upload our build into a folder, verify it, and then switch the build number in the scout file.
+The `index.html` file is the only thing that changes, everything else is just *added*. If we're a third party, it'd be the `scout.js` file since we'd be included in someone
+else's markup. Everything else has a 30yr cache header. We can upload our build into a folder, verify it, and then switch the build number in the scout file.
 
 ```JavaScript
 // Simplification of the above process
@@ -345,15 +347,23 @@ of time you cached your scout file for. In our case it's 5 minutes. It's a prett
 but have a very quick turn around time for critical fixes and consistent roll-outs. It also means that if we ever need to roll back, it's a single variable
 change to get people fully back on the old code. Clean up old builds as you feel is necessary.
 
+### Other media requests
+
+Naturally, you'll have some logo images, or some promo images to load as part of the app. These should probably just be [imageOptim](http://imageoptim.com/)'d,
+and sprited as best as possible. However, there is usually a second class of media on a site. Usually these are thumbnails and previews and avatars and such.
+For these files, I'd suggest using a mechanism to lazy load these media files. Make sure you're doing smart things with scroll event handlers (hint: throttling
+the hell out of them), but you don't want to load 50 avatars if the user is 1000px away from that part of your app. Just be smart about this stuff. It's not
+really my intent to cover this portion of app performance since it's not entirely related to deployment.
+
 ## Wrap Up
 
-As I started with, there's nothing that surprising about these techniques. Everything that could possibily be statically generated is statically generated,
-and thrown out on edge-cached servers. Every piece of functionality that isn't needed on page load, isn't loaded on page load. Everything that is needed
-is loaded in parallel. Everything is cached forever, save for the scout file and the data request (you can save recent requests in local storage though!).
+There's nothing that surprising about these techniques. Everything that could possibily be statically generated is statically generated,
+and thrown out on edge-cached servers. Every piece of functionality that isn't needed on page load, isn't loaded on page load. Everything that *is* needed
+is loaded in parallel right away. Everything is cached forever, save for the scout file and the data request (you can save recent requests in local storage though!).
 
 You aren't left with much else to optimize. You are always only loading and executing the minimum amount of JavaScript, and saving it for the maximum amount
 of time. Naturally the more common tips of not going overboard with external libraries, and paying attention to render performance, and serving HTML with the
 page response are all ways to change the performance (usually for the better), but this architecture fits well with many of today's more app-like deployments.
 
 There's something really comforting about exposing a minimal dynamic API that needs to be fast and having everything else served out of memory from nearby
-servers. You should do totally try it.
+static servers. You should do totally try it.
