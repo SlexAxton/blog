@@ -145,13 +145,13 @@ request for all styles and icons, with no additional weight from old IEs that do
 
 #### CSS Files
 
-When you update update your JavaScript files, you have usually made a change to the CSS as well. So these files usually have the same update times. For that
+It's typically the case that updates to JavaScript files necessitate changes to CSS as well. So these files usually have the same update times. For that
 reason it's pretty safe to package them together.
 
 So, as part of our build step, we first build our necessary CSS for our package into a file (for Bazaarvoice: styles are dependencies of templates,
 which are dependencies of views, which are dependencies of the separate module packages we're loading, so this is an automatic step). Then we
-read this file in, minify it, and inject it as a string in our main JavaScript file. Because you have control over when the templates are
-rendered, you can just inject the css into a style tag before rendering the template. We have to render on the serverside occasionally, as well,
+read this file in, minify it, and inject it as a string in our main JavaScript file. Because we have control over when the templates are
+rendered, we can just inject the css into a style tag before rendering the template. We have to render on the serverside occasionally, as well,
 and in these cases I would recommend against this technique to avoid a flash of unstyled content.
 
 ```JavaScript
