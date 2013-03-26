@@ -182,6 +182,8 @@ build profiles that we chose to create (mobile, oldIE, touch, etc), we can get 1
 generate them, have some consistent way of naming them, and we'll be able to choose our _exact_ needed app for a user, rather than a lot of extra
 weight for other users.
 
+Quick Note: Old IEs can be fickle with inlining a lot of CSS. Just test your stuff and if it breaks, just fall back to link tag injection for oldIEs.
+
 ## The Scout File
 
 This post actually started out as a means to solidify this term. Turns out I am a bit more long-winded than I anticipated.
