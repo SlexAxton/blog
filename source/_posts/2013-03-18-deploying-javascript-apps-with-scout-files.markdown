@@ -42,7 +42,7 @@ in a single place, and that place probably isn't in the order of your script tag
 One technique at the build-stage that is ideal for performance, is building minimal packages based on likely use. At page load, you'll want
 to load, parse, and execute as little JavaScript as possible. Require.js allows me to "exclude" modules from my builds and 
 [create separate secondary modules](https://github.com/requirejs/example-multipage/blob/master/tools/build.js#L8-L45). Rather than shaving bytes
-in your app files, you can avoid loading entire sections of code. Most sections of an app have predicatable entry points that you can listen for
+in your app files, you can avoid loading entire sections of code. Most sections of an app have predictable entry points that you can listen for
 before injecting more functionality.
 
 In my current app, only a fraction of the users click on the button that causes a specific flow to popup. Because of this we can
@@ -189,7 +189,7 @@ This post actually started out as a means to solidify this term. Turns out I am 
 The **Scout File** or **Scout Script** is the portion of JavaScript that decides which package needs to be loaded. It kicks off
 every process that can happen in parallel, has a low cache time, and is as small as possible.
 
-It gets its name from being a small entity that looks out of the cache from time to time to warn the everybody else that things have
+It gets its name from being a small entity that looks out of the cache from time to time to warn everybody else that things have
 changed. It's 'scouting' for an app update and gathering data.
 
 ```JavaScript
@@ -269,7 +269,7 @@ files should be guaranteed to never change. The only exception to this rule is t
 directory.
 
 The scout file for my third-party app is a very small JS file that contains a build number and a bit of JavaScript to determine the  build profile
-that needs to be loaded. It also contains the minimum amount of code to determine the intial data that I'm going to need for a page. It doesn't
+that needs to be loaded. It also contains the minimum amount of code to determine the initial data that I'm going to need for a page. It doesn't
 have jQuery, or really any dependencies, it just does exactly what it needs to do. This file is cached for about 5 minutes (should be relatively short, but
 close to the average session length).
 
@@ -356,7 +356,7 @@ really my intent to cover this portion of app performance since it's not entirel
 
 ## Wrap Up
 
-There's nothing that surprising about these techniques. Everything that could possibily be statically generated is statically generated,
+There's nothing that surprising about these techniques. Everything that could possibly be statically generated is statically generated,
 and thrown out on edge-cached servers. Every piece of functionality that isn't needed on page load, isn't loaded on page load. Everything that *is* needed
 is loaded in parallel right away. Everything is cached forever, save for the scout file and the data request (you can save recent requests in local storage though!).
 
