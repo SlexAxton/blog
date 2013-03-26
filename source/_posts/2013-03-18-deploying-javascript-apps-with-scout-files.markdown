@@ -33,7 +33,7 @@ in front of some [sass](http://sass-lang.com/) and [coffeescript](http://coffees
 [commonjs modules](http://wiki.commonjs.org/wiki/Modules/1.1). Whatever you're doing in development is your choice and not the topic du jour.
 
 The hope is that you have a way of taking your dev environment files and wrapping them up into concisely built and minified JavaScript
-and css files. Ideally this is an [easy step](http://requirejs.org/docs/optimization.html#basics) for you, otherwise, you'll tend to skip it.
+and CSS files. Ideally this is an [easy step](http://requirejs.org/docs/optimization.html#basics) for you, otherwise, you'll tend to skip it.
 *Optimize for ease of mind here.* I tend to disagree with the sentiment that *'script tags are enough.'* Try to manage your dependencies
 in a single place, and that place probably isn't in the order of your script tags in your HTML. Avoiding this step is easy until it isn't.
 
@@ -151,7 +151,7 @@ reason it's pretty safe to package them together.
 So, as part of our build step, we first build our necessary CSS for our package into a file (for Bazaarvoice: styles are dependencies of templates,
 which are dependencies of views, which are dependencies of the separate module packages we're loading, so this is an automatic step). Then we
 read this file in, minify it, and inject it as a string in our main JavaScript file. Because we have control over when the templates are
-rendered, we can just inject the css into a style tag before rendering the template. We have to render on the serverside occasionally, as well,
+rendered, we can just inject the CSS into a style tag before rendering the template. We have to render on the serverside occasionally, as well,
 and in these cases I would recommend against this technique to avoid a flash of unstyled content.
 
 ```JavaScript
