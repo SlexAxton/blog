@@ -33,10 +33,10 @@ And so forth.
 
 This is a pretty popular one.
 
-So let's say we want to make an `Animal` class in our code.
+So let's say we want to make an `Animal` class in our code. As is often necessary in production JavaScript applications.
 
 First we make a "constructor function," which acts kind of like a constructor method on the inside of a class in a classical
-language when it's invoked with the `new` operator.
+language when it's invoked with the `new` operator. Except this one is on the outside.
 
 ```javascript
 function Animal (name) {
@@ -85,11 +85,11 @@ var myDog = new Dog('Sparky');
 // Shucks
 ```
 
-So you move on to my main reason for bringing up this topic to begin with...
+And you eventually simply converge on the...
 
 ## The Father/Son Analogy Play
 
-Here we go. Finally a real world example of 'instances begetting instances.' It'll be a perfect analogy.
+Here we go. Finally a **real world** example of 'instances begetting instances.' It'll be a perfect analogy.
 It's even an interview question some places. Let's see how we might implement the relationship of a father
 and son (or a parent to its child) in JavaScript.
 
@@ -131,8 +131,88 @@ me.saiHi();
 
 It's a start! Seems like I inherited a little too much from my dad, but I inherited, none the less.
 
+Let's try to smooth things out to make the analogy work better. So we'll instantiate objects without
+a name and have a parent name them after they're created.
 
+```javascript
+// Wrap it all together
+function makeBaby(parent, name) {
+  // Instantiate a new object based on the parent
+  var baby = Object.create(parent);
 
+  // Set the name of the baby
+  baby.name = name;
+
+  // Give the baby away
+  return baby;
+}
+```
+
+Perfect. Now the baby can `sayHi` on it's own.
+
+```javascript
+var alex = makeBaby(myDad, 'Alex Sexton');
+
+alex.sayHi();
+// "Hello, I'm Alex Sexton"
+```
+
+Err. **yipes**. Babies can't talk. And what's this deal with a baby being made by **one** parent. Not to worry,
+we can fix all of this.
+
+First we'll probably want to try to take two parents into the `makeBaby` function (no giggles).
+
+```javascript
+function makeBaby(father, mother, name) {
+  var baby = Object.create(...// fuuu
+}
+```
+
+Multiple Inheritance! How did *you* get here? Ugh. Fine. We'll just simply mock the human chromosome pattern into
+our little inheritance example.
+
+```javascript
+// Let's take a set of 4 genes for ease of
+// example here. We'll put them in charge
+// a few things.
+function Human (name, genes_mom, genes_dad) {
+  this.name = name;
+  
+  // Set the genes
+  this.genes = {
+    darkHair: this._selectGenes(genes_mom.darkHair, genes_dad.darkHair),
+    smart:    this._selectGenes(genes_mom.smart,    genes_dad.smart),
+    athletic: this._selectGenes(genes_mom.athletic, genes_dad.athletic),
+    tall:     this._selectGenes(genes_mom.tall,     genes_dad.tall)
+  };
+
+  // Since genes affect you since birth we can set these as actual attributes
+  this.attributes = {
+    darkHair: !!(~this.genes.darkHair.indexOf('D')),
+    smart: !!(~this.genes.smart.indexOf('D')),
+    athletic: !!(~this.genes.athletic.indexOf('D')),
+    tall: !!(~this.genes.tall.indexOf('D'))
+  };
+}
+
+// You don't have access to your own gene selection
+// so we'll make this private (but in the javascript way)
+Human.prototype._selectGenes = function (gene1, gene2) {
+  // Assume that a gene is a 2 length array of the following possibilities
+  // DD, Dr, rD, rr -- the latter being the only non "dominant" result
+
+  // Simple random gene selection
+  return [ gene1[Math.random() > 0.5 ? 1 : 0], gene2[Math.random() > 0.5 ? 1 : 0] ]
+};
+
+Human.prototype.sayHi = function () {
+  console.log("Hello, I'm " + this.name);
+};
+
+function makeBaby(father, mother, name) {
+  
+}
+```
 
 
 
