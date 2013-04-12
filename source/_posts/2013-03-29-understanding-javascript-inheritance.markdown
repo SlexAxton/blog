@@ -125,7 +125,7 @@ myDad.sayHi();
 ```javascript
 // Let's use ES5 `object.create` in order to be as 'prototypal' as possible.
 var me = Object.create(myDad);
-me.saiHi();
+me.sayHi();
 // "Hello, I'm Bill Sexton"
 ```
 
