@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Understanding JavaScript Inheritance"
-permalink: /blog/2013/03/understanding-javascript-inheritance/
-date: 2013-03-29 01:33
+permalink: /blog/2013/04/understanding-javascript-inheritance/
+date: 2013-04-12 03:33
 comments: true
 categories: ["javascript", "inheritance"]
 ---
 
-So someone shoulder-taps you and asks you to explain the concepts behind JavaScript Inheritance to them. In my eyes you've 
+So someone shoulder-taps you and asks you to explain the concepts behind JavaScript Inheritance to them. In my eyes you've
 got a few options.
 
 ## The Terminology Play
@@ -209,11 +209,87 @@ Human.prototype.sayHi = function () {
   console.log("Hello, I'm " + this.name);
 };
 
-function makeBaby(father, mother, name) {
-  
+function makeBaby(name, mother, father) {
+  // Send in the genes of each parent
+  var baby = new Human(name, mother.genes, father.genes);
+  return baby;
 }
 ```
 
+**Elementary**. My only beef is that we no longer are using real prototypal inheritance.
+There is no live link between the parents and the child. If there was only one parent,
+we could use the `__proto__` property to set the parent as the prototype after the
+baby was instantiated. However we have two parents...
 
+So we'll need to implement runtime getters that do a lookup for each parent via
+[ES Proxies](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).
 
+```javascript
+function makeBaby(name, mother, father) {
+  // Send in the genes of each parent
+  var baby = new Human(name, mother.genes, father.genes);
 
+  // Proxy the baby
+  return new Proxy(baby, {
+    get: function (proxy, prop) {
+      // shortcut the lookup
+      if (baby[prop]) {
+        return baby[prop];
+      }
+
+      // Default parent
+      var parent = father;
+
+      // Spice it up
+      if (Math.random() > 0.5) {
+        parent = mother;
+      }
+
+      // See if they have it
+      return parent[prop];
+    }
+  });
+}
+```
+
+So now we support live lookups of parents, and, you know, some simplified genetics.
+
+Isn't that just a simple, well-defined, example of how straightforward inheritance can be in
+JavaScript?
+
+## Conclusion
+
+Sometimes these analogies get pretty crazy in my head, and I start to think that maybe
+instead of trying to apply known examples in the outside world in order to help people
+understand, it's often better to just let someone know why they might wanna use
+inheritance in their programs!
+
+I personally find the best Prototypal Inheritance analogy to be:
+
+```javascript
+var defaults = {
+  zero: 0,
+  one: 1
+};
+
+var myOptions = Object.create(defaults);
+var yourOptions = Object.create(defaults);
+
+// When I want to change *just* my options
+myOptions.zero = 1000;
+
+// When you wanna change yours
+yourOptions.one = 42;
+
+// When we wanna change the **defaults** even after we've got our options
+// even **AFTER** we've already created our instances
+defaults.two = 2;
+
+myOptions.two; // 2
+yourOptions.two; // 2
+```
+
+So stop making everything so confusing and go program cool stuff, and ignore
+my old presentations when I used these analogies.
+
+<3z
