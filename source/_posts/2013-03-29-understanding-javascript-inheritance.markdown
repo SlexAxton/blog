@@ -112,7 +112,7 @@ Human.prototype.sayHi = function () {
 So we'll create my dad first.
 
 ```javascript
-// Insantiate him
+// Instantiate him
 var myDad = new Human('Bill Sexton');
 
 // Greet him
@@ -148,7 +148,7 @@ function makeBaby(parent, name) {
 }
 ```
 
-Perfect. Now the baby can `sayHi` on it's own.
+Perfect. Now the baby can `sayHi` on its own.
 
 ```javascript
 var alex = makeBaby(myDad, 'Alex Sexton');
