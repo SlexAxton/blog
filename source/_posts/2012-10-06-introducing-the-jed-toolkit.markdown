@@ -3,7 +3,7 @@ layout: post
 title: "Introducing The Jed Toolkit"
 date: 2012-10-06 11:24
 comments: true
-categories: i18n, javascript, jed
+categories: i18n javascript jed
 ---
 
 ## The Jed Internationalization Toolkit
