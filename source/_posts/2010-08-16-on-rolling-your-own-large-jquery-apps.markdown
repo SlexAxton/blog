@@ -8,7 +8,7 @@ categories: [ "javascript", "mvc", "jquery" ]
 
 As a preface, make sure you've read my super-smart and talented yayQuery co-host Rebecca Murphey's blog post on this topic
 
-here: <a href="http://blog.rebeccamurphey.com/on-jquery-large-applications">On jQuery Large Applications</a> and here: <a href="http://blog.rebeccamurphey.com/on-rolling-your-own">On Rolling Your Own</a>.
+here: <a href="http://rmurphey.com/blog/2010/08/09/on-jquery-large-applications/">On jQuery Large Applications</a> and here: <a href="http://rmurphey.com/blog/2010/08/11/on-rolling-your-own/">On Rolling Your Own</a>.
 
 Rebecca points out some huge holes in the jQuery-verse when it comes to large-application development, and gives her opinion on why she doesn't think jQuery is ever a good fit for a large application. I disagree, and she's successfully convinced me to write a post on why I think what I do, so here we are.
 
