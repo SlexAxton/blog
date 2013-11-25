@@ -10,4 +10,4 @@ I felt like linking up this talk that I gave on Track B of JSConf in Portland th
 
 The talk is pretty short :D
 
-<iframe src="http://blip.tv/play/g_Mngs64GQI.html" width="596" height="334" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#AYLOuBkD" style="display:none"></embed>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JiXTVRXP_z0" frameborder="0" allowfullscreen></iframe>

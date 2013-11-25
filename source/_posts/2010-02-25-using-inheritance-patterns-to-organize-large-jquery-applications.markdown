@@ -6,7 +6,7 @@ comments: true
 categories: [ "javascript", "inheritance", "jquery" ]
 ---
 
-<img style="float: left; margin: 0 10px 10px 0;width:200px;height:150px;" src="http://alexsexton.com/wp-content/uploads/will.jpg" alt="Last will and testament - lolz" />
+<img style="float: left; margin: 0 10px 10px 0;width:200px;height:150px;" src="https://alexsexton.com/wp-content/uploads/will.jpg" alt="Last will and testament - lolz" />
 I want to introduce/reinforce a pattern for developing large applications with jQuery. I did not invent any of this, but I find that the resources that describe this technique are few and far-between.- so I'm taking a shot at it.
 
 By and large, when using jQuery, developers seem to forget the paradigms they learned for well structured code in other languages. This is likely due to the fact that jQuery is effectively neutral when it comes to your structural methodology or inheritance patterns, and therefore doesn't push someone in any one direction. Many times in other libraries (See Dojo Declare/Provide/Require, or MooTools Class, etc.), a paradigm is used and exclusively offered, and then code generally ends up more uniform than the oh-so-common-massive-jquery-indented-chains that I'm sure you've seen .
