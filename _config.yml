@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://alexsexton.com
+url: https://alexsexton.com
 title: Alex Sexton
 subtitle: Web Hacking. JavaScript.
 author: Alex Sexton
-simple_search: http://google.com/search
+simple_search: https://google.com/search
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
