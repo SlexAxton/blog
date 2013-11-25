@@ -16,4 +16,4 @@ Our core applications were built nearly 7 years ago, and gained features everyda
 * Injection/Rendering
 * Application
 
-Bazaarvoice has a developer blog that I sometimes write for, so I wrote an article on [Third Party Front-end Performance](http://developer.bazaarvoice.com/third-party-front-end-performance-part-1). Normally I don't just link across, but I think this information is actually fairly applicable to a large chunk of developers. So check it out. Feel free to comment either place. Part 2 and 3 to come.
+Bazaarvoice has a developer blog that I sometimes write for, so I wrote an article on [Third Party Front-end Performance](http://blog.developer.bazaarvoice.com/2012/04/11/third-party-front-end-performance-part-1/). Normally I don't just link across, but I think this information is actually fairly applicable to a large chunk of developers. So check it out. Feel free to comment either place. Part 2 and 3 to come.
