@@ -8,14 +8,3 @@
 <script src="{{ root_url }}/javascripts/github.js"></script>
 {% endcomment %}
 <script src="{{ root_url }}/javascripts/alexsexton.build.js"></script>
-<script type="text/javascript">
-  $.domReady(function(){
-      github.showRepos({
-          user: '{{site.github_user}}',
-          count: {{site.github_repo_count}},
-          skip_forks: {{site.github_skip_forks}},
-          target: '#gh_repos'
-      });
-  });
-</script>
-{% include google_analytics.html %}
