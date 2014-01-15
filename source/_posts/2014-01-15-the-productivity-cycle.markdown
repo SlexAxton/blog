@@ -61,7 +61,7 @@ The experiment, led by Baba Shiv at Stanford University, is pretty simple. Half 
 
 Simply put, we have a finite amount of mental energy. The students who spent their energy on remembering 7-digit numbers had no more energy left to spend on avoiding cake.
 
-The prefrontal cortex is primarily responsible for the things that creative people crave, like focus, but also other functions like short-term memory, abstract, problem solving, and willpower. The conclusion of the chocolate cake experiment implies that there is a finite amount of resources in the prefrontal cortex, and that one system's use of those resources could directly affect the available resources of another function.
+The prefrontal cortex is primarily responsible for the things that creative people crave, like focus, but also other functions like short-term memory, abstract problem solving, and willpower. The conclusion of the chocolate cake experiment implies that there is a finite amount of resources in the prefrontal cortex, and that one system's use of those resources could directly affect the available resources of another function.
 
 <img style="float:left;margin:0 30px 0 0" src="/images/prod_cycle/wavearea.jpg" alt="Graph with area under curve highlighted"> In the context of our sine-wave, I'm pretty sure I could make a good reference to calculus, because this concept has a lot to do with the area under the curve, but I'll get it wrong, and I won't hear the end of it in the comments.
 
