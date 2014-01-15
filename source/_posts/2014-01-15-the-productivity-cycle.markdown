@@ -63,7 +63,7 @@ Simply put, we have a finite amount of mental energy. The students who spent the
 
 The prefrontal cortex is primarily responsible for the things that creative people crave, like focus, but also other functions like short-term memory, abstract, problem solving, and willpower. The conclusion of the chocolate cake experiment implies that there is a finite amount of resources in the prefrontal cortex, and that one system's use of those resources could directly affect the available resources of another function.
 
-<img style="float:left;margin:0 10px 10px 0" src="/images/prod_cycle/wavearea.jpg" alt="Graph with area under curve highlighted"> In the context of our sine-wave, I'm pretty sure I could make a good reference to calculus, because this concept has a lot to do with the area under the curve, but I'll get it wrong, and I won't hear the end of it in the comments.
+<img style="float:left;margin:0 30px 0 0" src="/images/prod_cycle/wavearea.jpg" alt="Graph with area under curve highlighted"> In the context of our sine-wave, I'm pretty sure I could make a good reference to calculus, because this concept has a lot to do with the area under the curve, but I'll get it wrong, and I won't hear the end of it in the comments.
 
 This plays into our first theory quite well. If we use more mental energy in a quick burst (because we have a higher amplitude), we'll need deeper rest in order to recharge this energy. During our rest periods, the troughs in our sine-wave, we have to refill the energy that we spent during our peaks.
 
