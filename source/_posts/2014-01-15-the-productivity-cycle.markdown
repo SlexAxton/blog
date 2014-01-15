@@ -7,9 +7,6 @@ comments: true
 categories: ["productivity", "creativity", "programming"]
 ---
 
-
-# The Productivity Cycle
-
 People are interesting. We know so little about ourselves compared to what we'd like to think we know. We're all subtly different even though we're, on a whole, overwhelmingly predictable. There are copious studies to back up "average" data from people, and plenty of arm-chair anthropologists and psychologists that have very nice theories on how we tick. But most of us aren't 'average,' and perhaps some of us *tock* more than we *tick* (mark this as the first of many "stretches" in this post).
 
 I'd like to take the chance, while we're still mostly clueless, to write some of my non-scientific theories on cognitive ability and "focus" (the noun) in the context of creating and building things (or "shipping," as it were).
