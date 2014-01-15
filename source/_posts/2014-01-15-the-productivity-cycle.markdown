@@ -46,7 +46,7 @@ Narayanan, a true hacker spirit (read: CS Ph.D. and Assistant Professor at Princ
 
 *Drink a latte 30 minutes before a high point, work as hard as you can, and then use the warmth of your laptop to take a nap a few hours later, because you'll be spent.*
 
-Caffeine is a zero-sum game, but you can use that to your advantage. Consuming caffeine in time for it to effect you at the exact peak of your "focus wave" effectively makes the highs higher, and the lows lower. The rich get richer, while the poor get poorer. It's like the sad state of our socioeconomic classes, except not awful, and for brain power!
+Caffeine is a zero-sum game, but you can use that to your advantage. Consuming caffeine in time for it to affect you at the exact peak of your "focus wave" effectively makes the highs higher, and the lows lower. The rich get richer, while the poor get poorer. It's like the sad state of our socioeconomic classes, except not awful, and for brain power!
 
 
 ## You Require More Vespene Gas
