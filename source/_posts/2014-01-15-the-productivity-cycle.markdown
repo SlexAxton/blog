@@ -91,7 +91,7 @@ Most of this should be obvious at this point, so I won't drag on.
 
 ## The Nap Month
 
-I have nothing but my own personal experience to back this up, but I find that my motivation and passion levels work in a similar way they do on a **yearly** cycle as they do on a **daily** cycle. For parts of the year, I'm excited by work, and go out of my way to build things in my free time, and other parts of the year, I just want to come home and binge watch a season of a TV show on Netflix.
+I have nothing but my own personal experience to back this up, but I find that my motivation and passion levels work in a similar way on a **yearly** cycle as they do on a **daily** cycle. For parts of the year, I'm excited by work, and go out of my way to build things in my free time, and other parts of the year, I just want to come home and binge watch a season of a TV show on Netflix.
 
 For this reason I have to wonder if some of the same energy principles apply. **Can I increase the intensity and duration of the productive months?** If so, at what cost?
 
