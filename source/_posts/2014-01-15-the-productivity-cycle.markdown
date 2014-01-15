@@ -109,7 +109,7 @@ This one seems a little bit more straight forward to me.
 
 **Just stop working so much.**
 
-Take a nap from your work. I understand that this is not a viable solution for businesses that intend on making money, but I think there can be some good compromises here. Namely, most hip tech companies have very generous vacation allowances already. Use your vacation during a low point, and in perfect cliché form, "recharge."
+Take a nap from your work. I understand that this is not a viable solution for businesses that intend to make money, but I think there can be some good compromises here. Namely, most hip tech companies have very generous vacation allowances already. Use your vacation during a low point, and in perfect cliché form, "recharge."
 
 Additionally, companies with large enough teams can have two modes of employment that employees could ideally opt into. "Passion-mode" and "coast-mode." Someone who is on an upswing should get put on a big project that's going to take a lot of energy. Someone who is burnt out from the last big project should be given work that will allow them to show up a little late, and leave a little early.
 
@@ -125,4 +125,4 @@ I can't guarantee that any of this will resonate with you, or work for you if yo
 
 I simply want my hard work to be spent most efficiently.
 
-<small>Special thanks to <a href="https://twitter.com/hazelcough">Michelle Bu</a> for proof-reading this.</small>
+<small>Special thanks to <a href="https://twitter.com/hazelcough">Michelle Bu</a> for reading this ahead of time.</small>
