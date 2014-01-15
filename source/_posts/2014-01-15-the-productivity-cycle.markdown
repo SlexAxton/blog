@@ -26,7 +26,7 @@ I can't help but lead with "ego" and "legacy" because the entire ability to crea
 
 ## Caffeine is a Zero-Sum Game
 
-![https://docs.google.com/document/d/1LemTG0sOtGMxagtLUc5204C5_tGQFM98Y-2XrXH2NBs/pubimage?id=1LemTG0sOtGMxagtLUc5204C5_tGQFM98Y-2XrXH2NBs&image_id=1Ff7qIOqrbz55hW7erKpBjJR3OKP3fik](https://docs.google.com/document/d/1LemTG0sOtGMxagtLUc5204C5_tGQFM98Y-2XrXH2NBs/pubimage?id=1LemTG0sOtGMxagtLUc5204C5_tGQFM98Y-2XrXH2NBs&image_id=1Ff7qIOqrbz55hW7erKpBjJR3OKP3fik)
+![http://slex.me/image/221c0l1w2k2n/focuswave.png](http://slex.me/image/221c0l1w2k2n/focuswave.png)
 
 <small>Ostensibly, this is a graph of my potential "focus" levels during a day.</small>
 
@@ -124,3 +124,5 @@ I have very few projects and accomplishments that haven't come to me in a "momen
 I can't guarantee that any of this will resonate with you, or work for you if you try it. But I do think that everyone goes through the motivational recessions, and we should be actively attempting to eliminate or reduce them. What is Quantitative Easing for the Soul?
 
 I simply want my hard work to be spent most efficiently.
+
+<small>Special thanks to <a href="https://twitter.com/hazelcough">Michelle Bu</a> for proof-reading this.</small>
