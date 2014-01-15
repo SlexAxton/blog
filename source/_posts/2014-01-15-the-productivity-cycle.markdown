@@ -75,7 +75,7 @@ Some folks will recommend a [caffeine nap](http://en.wikipedia.org/wiki/Power_na
 
 ### Moderation
 
-I would add, finally, that Dr. Narayanan found that the body adjusts to regular caffeine intake (reducing adenosine in favor of the caffeine) in as little as 2 to 3 weeks. That means that if you're a long-time coffee-drinker, you *really do* need that cup of coffee to get going in the morning in order to get up to your pre-caffeine addiction baseline.
+I would add, finally, that Dr. Narayanan found that the body adjusts to regular caffeine intake in as little as 2 to 3 weeks. That means that if you're a long-time coffee-drinker, you *really do* need that cup of coffee to get going in the morning in order to get up to your pre-caffeine addiction baseline.
 
 He notes that it takes 5 days to reach adenosine normality (good) if you're not consuming caffeine. He retrospectively adds that he initially did not place enough value in these 'quitting cycles' (hinting that perhaps you should not repeat his mistakes).
 
@@ -101,7 +101,7 @@ I really struggle (in a not very serious kind of way) during the month or two wh
 
 I find that an interesting, new passion project gets my creative energy flowing much better than jumping into old work. If I really want to get in the mood to program, I'll hop off my projects with deadlines and build something that I know probably won't ever even get finished, but that I'm just excited to build.
 
-Caffeine is a substitute for adenosine in our brain. If we substitute the current list of things we have to do, with a temporarily more engaging list, it may give us the same slingshot effect that caffeine does for our energy on a micro level.
+Caffeine blocks adenosine (a sleep chemical) receptors in our brain, causing us to avoid sleep longer. If we substitute the current list of things we have to do, with a temporarily more engaging list, it may give us the same slingshot effect that caffeine does for our energy on a micro level.
 
 ### Macronaps
 
