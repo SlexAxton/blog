@@ -26,7 +26,7 @@ I can't help but lead with "ego" and "legacy" because the entire ability to crea
 
 ## Caffeine is a Zero-Sum Game
 
-![http://slex.me/image/221c0l1w2k2n/focuswave.png](http://slex.me/image/221c0l1w2k2n/focuswave.png)
+![/images/prod_cycle/focuswave.png](/images/prod_cycle/focuswave.png)
 
 <small>Ostensibly, this is a graph of my potential "focus" levels during a day.</small>
 
@@ -53,7 +53,7 @@ Caffeine is a zero-sum game, but you can use that to your advantage. Consuming c
 
 Many people who have read Daniel Kahneman's [*Thinking Fast And Slow*](http://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555) will remember the [chocolate cake experiment](http://books.google.com/books?id=TA7Q27RWlj0C&lpg=PT62&ots=qSRd7MEIpZ&pg=PT62#v=onepage&q&f=false).
 
-![http://slex.me/image/3V1w3V0A3R45/cake.jpg](http://slex.me/image/3V1w3V0A3R45/cake.jpg)
+![/images/prod_cycle/cake.jpg](/images/prod_cycle/cake.jpg)
 
 <small>Photo by [Food Thinkers](http://www.flickr.com/photos/foodthinkers/) under [CC-by-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/)</small>
 
@@ -63,7 +63,7 @@ Simply put, we have a finite amount of mental energy. The students who spent the
 
 The prefrontal cortex is primarily responsible for the things that creative people crave, like focus, but also other functions like short-term memory, abstract, problem solving, and willpower. The conclusion of the chocolate cake experiment implies that there is a finite amount of resources in the prefrontal cortex, and that one system's use of those resources could directly affect the available resources of another function.
 
-<img style="float:left;margin:0 10px 10px 0" src="http://slex.me/image/0Y2S3I241h0z/area.jpg"> In the context of our sine-wave, I'm pretty sure I could make a good reference to calculus, because this concept has a lot to do with the area under the curve, but I'll get it wrong, and I won't hear the end of it in the comments.
+<img style="float:left;margin:0 10px 10px 0" src="/images/prod_cycle/wavearea.jpg" alt="Graph with area under curve highlighted"> In the context of our sine-wave, I'm pretty sure I could make a good reference to calculus, because this concept has a lot to do with the area under the curve, but I'll get it wrong, and I won't hear the end of it in the comments.
 
 This plays into our first theory quite well. If we use more mental energy in a quick burst (because we have a higher amplitude), we'll need deeper rest in order to recharge this energy. During our rest periods, the troughs in our sine-wave, we have to refill the energy that we spent during our peaks.
 
