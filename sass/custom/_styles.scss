@@ -26,3 +26,10 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
+
+#about-alex {
+  font-family: $serif !important;
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 1.5em;
+}
