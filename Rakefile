@@ -8,6 +8,7 @@ ssh_user       = "slex@107.170.126.63"
 ssh_port       = "22"
 document_root  = "/var/www/alexsexton.com/octopress"
 rsync_delete   = false
+rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
