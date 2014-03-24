@@ -4,7 +4,7 @@ title: "Deploying JavaScript Applications"
 permalink: /blog/2013/03/deploying-javascript-applications
 date: 2013-03-26 03:25
 comments: true
-categories: ["JavaScript", "performance"]
+categories: ["javascript", "performance"]
 ---
 
 **Preface:** Nothing in this post is necessarily new, or even anything I thought of first (save for a name or two). However,
@@ -21,8 +21,8 @@ are no good alternatives. Feel free to comment on other good techniques and tool
 
 ## You
 
-You work on a large app. You might be a third party, or you might not be. You might be on a team, or you might not be. 
-You want maximum performance, with a high cache rate and extremely high availability. 
+You work on a large app. You might be a third party, or you might not be. You might be on a team, or you might not be.
+You want maximum performance, with a high cache rate and extremely high availability.
 
 ### Dev with builds in mind
 
@@ -40,7 +40,7 @@ in a single place, and that place probably isn't in the order of your script tag
 ### Loading what you need is better than byte shaving
 
 One technique at the build-stage that is ideal for performance, is building minimal packages based on likely use. At page load, you'll want
-to load, parse, and execute as little JavaScript as possible. Require.js allows you to "exclude" modules from your builds and 
+to load, parse, and execute as little JavaScript as possible. Require.js allows you to "exclude" modules from your builds and
 [create separate secondary modules](https://github.com/requirejs/example-multipage/blob/master/tools/build.js#L8-L45). Rather than shaving bytes
 in your app files, you can avoid loading entire sections of code. Most sections of an app have predictable entry points that you can listen for
 before injecting more functionality.
@@ -68,7 +68,7 @@ until you need to do cross domain form POSTs.
 
 I'm all for progressive enhancement, and have to support IE6 in our primary application. However, it pains me when modern browser users have to pay
 a performance price for the sins of others. It's a good idea to try to support some level of "conditional builds" or "profile builds." In the
-AMD world, you can use the [has.js integration](http://requirejs.org/docs/optimization.html#hasjs), or if you're feeling especially dirty, a build pragma. 
+AMD world, you can use the [has.js integration](http://requirejs.org/docs/optimization.html#hasjs), or if you're feeling especially dirty, a build pragma.
 However, third-parties have written some pretty nifty tools for doing this as a plugin.
 
 One of the best tools for this that I've seen is [AMD-feature](https://github.com/jensarps/AMD-feature). It allows you
@@ -343,7 +343,7 @@ var build = '__BUILD__'; // Replaced at build time
 injectApp('/app/' + build + '/build.js');
 ```
 
-Deploying a new version of the app becomes "updating one variable." This means that every user on the site will have a fully updated app in the amount 
+Deploying a new version of the app becomes "updating one variable." This means that every user on the site will have a fully updated app in the amount
 of time you cached your scout file for. In our case it's 5 minutes. It's a pretty good trade off for us. We get lifetime caching for our big files and media,
 but have a very quick turn around time for critical fixes and consistent roll-outs. It also means that if we ever need to roll back, it's a single variable
 change to get people fully back on the old code. Clean up old builds as you feel is necessary.
