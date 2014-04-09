@@ -20,8 +20,23 @@
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ root_url }}/favicon.ico" rel="icon">
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7519092/688024/css/fonts.css" />
   <style type="text/css">
     {% include custom/screen.css %}
+    body>header h1, .heading, body>header h1, h1, h2, h3, h4, h5, h6 {
+      font-style: normal;
+      font-weight: 600;
+    }
+    strong {
+      font-weight: 600;
+    }
+    .serif, body, #content .blog-index a[rel="full-article"] {
+      font-weight: 300;
+    }
+    .sans, body>header h2, body>nav form .search, body>nav a, article header p.meta, article>footer, #content .blog-index footer, html .gist .gist-file .gist-meta, #blog-archives a.category, #blog-archives time, aside.sidebar section, body>footer {
+      font-weight: 400;
+      font-style: normal;
+    }
   </style>
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   {% include custom/head.html %}
