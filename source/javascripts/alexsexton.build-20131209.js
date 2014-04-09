@@ -17,3 +17,10 @@ if (as_d1 && as_d2) {
 /* ganalytics */
 var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-406505-7']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();
 
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.type = 'text/css';
+  l.href = 'https://cloud.typography.com/7519092/688024/css/fonts.css';
+  document.getElementsByTagName('head')[0].appendChild(l);
+})();
