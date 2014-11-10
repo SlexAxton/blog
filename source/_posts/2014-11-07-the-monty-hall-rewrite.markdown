@@ -2,7 +2,7 @@
 layout: post
 title: "The Monty Hall Rewrite"
 permalink: /blog/2014/11/the-monty-hall-rewrite/
-date: 2014-11-07 14:08:01 -0600
+date: 2014-11-10 13:37:01 -0600
 comments: true
 categories: ["programming"]
 ---
