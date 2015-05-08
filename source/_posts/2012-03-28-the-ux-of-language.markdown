@@ -29,7 +29,7 @@ This is the type of language that we've all come to expect out of the web. It ge
 
 This is in stark contrast to some of the more popular social networks.
 
-![/images/uxoflang/google-mf.png](/images/uxoflang/google-mf.png)
+![/images/uxoflang/google-mf2.png](/images/uxoflang/google-mf2.png)
 
 Not only does this correctly address the correct pluralization for 'people', it also takes into consideration the offset from the total count of the 3 people that are listed explicitly. This attention to detail doesn't stop at decent pluralization, but also gender.
 
