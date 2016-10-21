@@ -38,7 +38,7 @@ So let's say we want to make an `Animal` class in our code. As is often necessar
 First we make a "constructor function," which acts kind of like a constructor method on the inside of a class in a classical
 language when it's invoked with the `new` operator. Except this one is on the outside.
 
-```javascript
+``` javascript
 function Animal (name) {
   this.name = name;
 }
@@ -48,7 +48,7 @@ var myAnimal = new Animal('Annie');
 
 Then we want to have actions that all animals can do.
 
-```javascript
+``` javascript
 Animal.prototype.walk = function () {
   console.log(this.name + ' is walking.');
 };
@@ -56,7 +56,7 @@ Animal.prototype.walk = function () {
 
 But then you want to define a more specific *type* of animal. Things start to get weird.
 
-```javascript
+``` javascript
 // I think we need to define a new Animal type and extend from it somehow
 
 function Dog (name) {
@@ -72,7 +72,7 @@ Dog.prototype = Animal.prototype; // ?? I HAVE NO IDEA
 
 Then you remember that Prototypal Inheritance doesn't really do 'classes' so much. So you do something like this:
 
-```javascript
+``` javascript
 var Dog = new Animal('Annie'); // ??? NO THATS NOT IT >:(
 
 // Maybe we can try Object.create? I hear it's prototypal-y
@@ -95,7 +95,7 @@ and son (or a parent to its child) in JavaScript.
 
 We'll start out like we did before, with a Human constructor
 
-```javascript
+``` javascript
 function Human( name ) {
   this.name = name;
 }
@@ -103,7 +103,7 @@ function Human( name ) {
 
 Then we'll add in a common human shared action.
 
-```javascript
+``` javascript
 Human.prototype.sayHi = function () {
   console.log("Hello, I'm " + this.name);
 };
@@ -111,7 +111,7 @@ Human.prototype.sayHi = function () {
 
 So we'll create my dad first.
 
-```javascript
+``` javascript
 // Instantiate him
 var myDad = new Human('Bill Sexton');
 
@@ -122,7 +122,7 @@ myDad.sayHi();
 
 **Score.** Now let's create me.
 
-```javascript
+``` javascript
 // Let's use ES5 `object.create` in order to be as 'prototypal' as possible.
 var me = Object.create(myDad);
 me.sayHi();
@@ -134,7 +134,7 @@ It's a start! Seems like I inherited a little too much from my dad, but I inheri
 Let's try to smooth things out to make the analogy work better. So we'll instantiate objects without
 a name and have a parent name them after they're created.
 
-```javascript
+``` javascript
 // Wrap it all together
 function makeBaby(parent, name) {
   // Instantiate a new object based on the parent
@@ -150,7 +150,7 @@ function makeBaby(parent, name) {
 
 Perfect. Now the baby can `sayHi` on its own.
 
-```javascript
+``` javascript
 var alex = makeBaby(myDad, 'Alex Sexton');
 
 alex.sayHi();
@@ -162,7 +162,7 @@ we can fix all of this.
 
 First we'll probably want to try to take two parents into the `makeBaby` function (no giggles).
 
-```javascript
+``` javascript
 function makeBaby(father, mother, name) {
   var baby = Object.create(...// fuuu
 }
@@ -171,7 +171,7 @@ function makeBaby(father, mother, name) {
 Multiple Inheritance! How did *you* get here? Ugh. Fine. We'll just simply mock the human chromosome pattern into
 our little inheritance example.
 
-```javascript
+``` javascript
 // Let's take a set of 4 genes for ease of
 // example here. We'll put them in charge
 // a few things.
@@ -224,7 +224,7 @@ baby was instantiated. However we have two parents...
 So we'll need to implement runtime getters that do a lookup for each parent via
 [ES Proxies](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).
 
-```javascript
+``` javascript
 function makeBaby(name, mother, father) {
   // Send in the genes of each parent
   var baby = new Human(name, mother.genes, father.genes);
@@ -266,7 +266,7 @@ inheritance in their programs!
 
 I personally find the best Prototypal Inheritance analogy to be:
 
-```javascript
+``` javascript
 var defaults = {
   zero: 0,
   one: 1

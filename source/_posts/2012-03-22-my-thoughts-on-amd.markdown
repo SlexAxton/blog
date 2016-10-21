@@ -25,7 +25,7 @@ So if you have your app split up into modules via some preprocessor system, that
 
 So write all your code how you like it, and right before you release it on github, consider adding this:
 
-```javascript
+``` javascript
 if (typeof define === 'function' && define.amd) {
   define(function () {
     return TheModule;
@@ -36,7 +36,7 @@ if (typeof define === 'function' && define.amd) {
 
 And to take this a step further, I'd encourage the preprocessing systems to just process _to_ AMD.
 
-```javascript
+``` javascript
 // Node style modules
 var x = require('x');
 var y = require('y');
@@ -48,7 +48,7 @@ exports.module = res;
 
 Instead of preprocessing this code to work on the web by just concatenating the globals in the correct order, why not just use AMD? It could easily be translated at preprocess time to:
 
-```javascript
+``` javascript
 define(['x','y'], function(x,y) {
   var res = doSomething(x, y);
   return res;
@@ -79,7 +79,7 @@ AMD is implemented by attaching a scriptloader to an object. Load something, sto
 
 The other notion is that it's a chore to write. If we ignore the fact that most modern code editors could easily store the boilerplate for you, I would argue that it's actually less characters than _not_ doing it. Also, (nearly) everyone who says this also complains that it forces them to nest their code an extra level, and then they turn around and immediately wrap all of their code in an IIFE.
 
-```javascript
+``` javascript
 // An IIFE for leakage. One level of nesting.
 (function(){
   // require statement per dependency
@@ -95,7 +95,7 @@ The other notion is that it's a chore to write. If we ignore the fact that most 
 
 Here's the same AMD module:
 
-```javascript
+``` javascript
 require([
     'path/x',
     'path/y',
@@ -123,7 +123,7 @@ I obviously like AMD a decent amount, but I also think RequireJS is a fantastic 
 
 I use the pattern in my [require-handlebars-plugin](https://github.com/SlexAxton/require-handlebars-plugin) to great effect. Rather than require a precompiled template during dev mode, I simply prefix my module name, and the template compilation occurs before the callback is invoked.
 
-```javascript
+``` javascript
 // In a no template middleware world
 require(['handlebars', 'text!someTemplate.hbs'], function ( Handlebars, strTemplate ) {
   var fnTemplate = Handlebars.compile( strTemplate );
@@ -135,7 +135,7 @@ This is also similar to the technique where templates are stored in `type="scrip
 
 With the hbs template plugin, this is handled for you.
 
-```javascript
+``` javascript
 // With require-handlebars-plugin
 require(['hbs!someTemplate'], function ( fnTemplate ) {
   fnTemplate({"some":data});

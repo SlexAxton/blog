@@ -76,7 +76,7 @@ to use a set of known supported features to load the best fitting build for the 
 out jQuery with Zepto (assuming you stick to the shared subset). You can add and remove polyfills for the correct users. If 20% of your JavaScript
 is loading for %3 of your users, something is backwards.
 
-```JavaScript
+``` javascript
 define({
     'dropdown': [
         {
@@ -154,7 +154,7 @@ read this file in, minify it, and inject it as a string in our main JavaScript f
 rendered, we can just inject the CSS into a style tag before rendering the template. We have to render on the serverside occasionally, as well,
 and in these cases I would recommend against this technique to avoid a flash of unstyled content.
 
-```JavaScript
+``` javascript
 var css   = '#generated{css:goes-here;}';
 var head  = document.head || document.getElementsByTagName('head')[0],
 var style = document.createElement('style');
@@ -194,7 +194,7 @@ every process that can happen in parallel, has a low cache time, and is as small
 It gets its name from being a small entity that looks out of the cache from time to time to warn everybody else that things have
 changed. It's 'scouting' for an app update and gathering data.
 
-```JavaScript
+``` javascript
 // Simplified example of a scout file
 (function () {
   // Feature test some stuff
@@ -315,7 +315,7 @@ The goal in all of this is to:
 
 The folder structure I normally see is something like:
 
-```sh
+``` sh
 # Simplified for Ease of Eyes
 | S3-Bucket-1
   |- app
@@ -337,7 +337,7 @@ The folder structure I normally see is something like:
 The `index.html` file is the only thing that changes, everything else is just *added*. If we're a third party, it'd be the `scout.js` file since we'd be included in someone
 else's markup. Everything else has a 30yr cache header. We can upload our build into a folder, verify it, and then switch the build number in the scout file.
 
-```JavaScript
+``` javascript
 // Simplification of the above process
 var build = '__BUILD__'; // Replaced at build time
 injectApp('/app/' + build + '/build.js');

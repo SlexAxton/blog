@@ -12,7 +12,7 @@ categories: [ "javascript", "accessibility" ]
 
 <p>Please don't set them to hidden in your CSS in order to stop this from happening. This hurts accessibility, SEO, and the laws of white-hat web development, because without JavaScrpt, this content can never be seen. Instead, try this little trick:</p>
 
-```html
+``` html
 <style type="text/css">
 /*
 Obviously this is not a real class name, but here you would just

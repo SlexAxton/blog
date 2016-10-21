@@ -12,7 +12,7 @@ A common pattern for application development loads a page template with the appl
 
 One example might be something like:
 
-```html
+``` html
 <html>
   <head>
     <script type="text/javascript" src="jquery.js" />
@@ -40,7 +40,7 @@ The problem with this is that the request for the page content isn't made until 
 
 Instead of wrapping the $.ajax() call in a dom ready function, try just wrapping your `success` callback function in one instead. This will allow the request to fire off as soon as possible, but will ensure the handling of the data doesn't happen until your domready event has fired.
 
-```html
+``` html
 <html>
   <head>
     <script type="text/javascript" src="jquery.js" />
@@ -72,7 +72,7 @@ As a footnote, this is only one of many things you can do outside of dom ready t
 
 The reason for this is essentially the same as before. You can allocate all the function definitions and variables while the page is building, rather than afterwards. Anything that you can do asynchronously right away is going to generally be better than waiting until the document is ready. There are a few ways to make this a little better organized, but organization isn't the topic, so here is a simple example of code you might write with minimal code execution in the dom ready function. The closure that I have surrounding the entire block of code serves to make the variables have a similar scope affect as it would inside of a document ready function, though it's not absolutely necessary.
 
-```javascript
+``` javascript
   // This runs immediately
   $('a').live('click', function(e){
     alert('OKBYE!');

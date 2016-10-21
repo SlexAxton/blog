@@ -12,7 +12,7 @@ The script (which can be downloaded at the site) hinges on a single heuristic fo
 
 e.g.
 
-```javascript
+``` javascript
 label1: while (i < 10) {
   if (!valid(i)) {
     continue label1;

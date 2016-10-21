@@ -47,7 +47,7 @@ Assuming you're sold on the idea of a proper language treatment of your app, let
 
 In JavaScript, the naïve solution would be to do something like the following:
 
-```javascript
+``` javascript
 if ( X === 1 ) {
   return "There is one result";
 }
@@ -58,7 +58,7 @@ else {
 
 This results in a proper english sentence in all cases. That's great, but let's get a touch more complex. **Now we want to support another language.** The pluralization rules for English are different than the rules for French. If we want to support French, our solution starts looking more like this:
 
-```javascript
+``` javascript
 if ( lang === "en" ) {
   if ( X === 1 ) {
     return "There is one result";
@@ -83,7 +83,7 @@ This quickly becomes an unscalable solution. You might be thinking "Well, Alex, 
 
 Even when ignoring locale, we still have some combinatoric debts to pay. Let's check out the code for handling this naïvely:
 
-```javascript
+``` javascript
 if ( ResCount !== 1 && CatCount !== 1 ) {
   return "There are " + ResCount + " results in " + CatCount + " categories.";
 }
@@ -108,7 +108,7 @@ Now we have to multiply that logic times the number of gender choices. Most spec
 
 I recently released a library, [Jed](http://slexaxton.github.com/Jed/), for using Gettext style messages in JavaScript. Gettext is a GNU spec that's been around for ages. I had been exposed to a little bit of Gettext from my python days, and considered it to be the most popular solution to many of these problems. The main feature of Gettext is that you can decouple the messages from the plural-forms of a given language.
 
-```javascript
+``` javascript
 var pluralForms = {
   "en" : function ( x ) {
     if ( x === 1 ) {
@@ -127,7 +127,7 @@ var pluralForms = {
 
 We now get back an index of sorts. "Gettext" refers to the lookup/loading/encoding mechanism more than anything, but with these plural forms we could do a lookup for the correct string, stored as data.
 
-```javascript
+``` javascript
 var translations = {
   "en" : {
     "somekey" : [ "There is one result.", "There are %s results." ]
@@ -161,7 +161,7 @@ I won't go in to much detail about the syntax, as that's not the point of this p
 
 ### PluralFormat
 
-```javascript
+``` javascript
 There {ResCount, plural,
         one {is one result}
         other {are # results}
@@ -177,7 +177,7 @@ Using `PluralFormat` we were able to decouple the pluralization of each of the n
 
 Gender is usually handled via `SelectFormat` which works much like a `switch` statement (except `default` becomes `other`).
 
-```javascript
+``` javascript
 {GENDER, select,
   male {He}
   female {She}

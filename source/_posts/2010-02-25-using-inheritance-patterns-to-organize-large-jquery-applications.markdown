@@ -23,14 +23,14 @@ Choosing your form of modularity is an important step. If you come from a backgr
 
 I'll jump straight to a code example of this technique in use, and then describe it's setup and structure:
 
-```html
+``` html
 <!-- Just an empty div to begin with -->
 <div id="mySpeaker"></div>
 ```
 
 Then we'll run our javascript:
 
-```javascript
+``` javascript
 $(function(){
   // Call a custom plugin for your object on a dom element
   $('#mySpeaker').speaker({'name': 'Alex'});
@@ -49,7 +49,7 @@ $(function(){
 
 And the html now looks more like this:
 
-```html
+``` html
 <div id="mySpeaker">
   <h1>Alex</h1>
   <p>I am a speaker.</p>
@@ -62,7 +62,7 @@ Implementing this technique is pretty simple, and should actually take less brai
 
 Let's start with the <strong>Speaker</strong> object.
 
-```javascript
+``` javascript
 /**
  * Object Speaker
  * An object representing a person who speaks.
@@ -106,7 +106,7 @@ The bridge that we build is probably the most interesting part of this pattern. 
 
 The most simple way to do this is by hand:
 
-```javascript
+``` javascript
 // Make sure Object.create is available in the browser (for our prototypal inheritance)
 // Courtesy of Papa Crockford
 // Note this is not entirely equal to native Object.create, but compatible with our use-case
@@ -143,7 +143,7 @@ Now you have separated the creation of the plugin from the actual code itself. Y
 
 Here is some code that might get you started writing/using a 'bridge' function (bridge is what's found now in jQuery UI 1.8) that can help you attach your general code with a given plugin (since writing that same initialization plugin code multiple times would get old and defeat the whole DRY principle that our inheritance model has hopefully provided). This code is mostly courtesy of Scott Gonzalez because I couldn't think of a more stripped down elegant approach to this. I changed it to accept Objects instead of Constructor Functions because that works a little better with my example (prototypal inheritance). I also force it to call my <strong>init</strong> function in order to save myself an extra call. (<a href="http://pastie.org/517177">This example</a> shows Scott's use of this method along with John Resig's Simple-Inheritance implementation - also very cool.)
 
-```javascript
+``` javascript
 $.plugin = function(name, object) {
 	$.fn[name] = function(options) {
                 // optionally, you could test if options was a string

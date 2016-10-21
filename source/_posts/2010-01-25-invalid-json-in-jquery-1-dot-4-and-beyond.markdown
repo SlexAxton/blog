@@ -10,7 +10,7 @@ I'm pretty happy about jQuery's move to only supporting valid JSON, as well as i
 
 Now, I understand there are a variety of libraries and services that currently break the standard. I would strongly suggest you write to them and demand that they follow the spec. Nothing should break for their users, so it's not much too ask. Until then I wrote this little lovely plugin so you could consume criminal data sources until they get their acts together:
 
-```javascript
+``` javascript
 jQuery.getInvalidJSON = function(url, data, callback) {
   return jQuery.get(url, data, function(d){
     callback.call(this, (new Function('return ' + d))());
