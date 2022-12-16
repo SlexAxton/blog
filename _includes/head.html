@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{% if page.title != "" %}{{ page.title }} - {% endif %}{% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author }}">
   <meta name="twitter:widgets:csp" content="on">
 
