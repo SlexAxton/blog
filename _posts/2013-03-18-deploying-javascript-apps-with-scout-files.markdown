@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deploying JavaScript Applications"
-permalink: /blog/2013/03/deploying-javascript-applications
+permalink: /blog/2013/03/deploying-javascript-applications/
 date: 2013-03-26 03:25
 comments: true
 categories: ["javascript", "performance"]
