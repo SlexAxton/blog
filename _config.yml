@@ -22,7 +22,7 @@ title: Alex Sexton
 author: Alex Sexton
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Alex Sexton lives in Austin, TX, is an Engineer at Stripe and helps make Modernizr and jQuery.
+  Alex Sexton is a software engineer living in Austin, TX
 subtitle: Web Hacking. JavaScript.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://alexsexton.com
@@ -88,19 +88,6 @@ twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: true
 twitter_tweet_button: true
-
-# Google +1
-google_plus_one: true
-google_plus_one_size: medium
-
-# Google Plus Profile
-# Hidden: No visible button, just add author information to search results
-googleplus_user: 107780139765882604901
-googleplus_hidden: false
-
-# Disqus Comments
-disqus_short_name: slexblog
-disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-406505-7
