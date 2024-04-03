@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Alex Sexton</title>
   <meta name="author" content="{{ site.author }}">
-  <meta name="twitter:widgets:csp" content="on">
   <meta name="description" content="Alex Sexton lives in Austin, TX and works as a software engineer at Stripe.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{ root_url }}/favicon.ico" rel="icon">
@@ -62,10 +61,20 @@
     }
   </style>
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-87SBMV7WZX"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-87SBMV7WZX');
+</script>
 </head>
 
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
     <div class="content">
     {{ content }}
-    </div>  
+    </div>
+    
 </body>

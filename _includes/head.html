@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="iem7"><![endif]-->
-<!--[if lt IE 9]><html class="lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>{% if page.title %}{% if page.title != "" %}{{ page.title }} - {% endif %}{% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author }}">
-  <meta name="twitter:widgets:csp" content="on">
-
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="Alex Sexton lives in Austin, TX and works as a software engineer at Stripe.">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ root_url }}/favicon.ico" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
   <style type="text/css">
-    html{font-family:serif;font-size:137.5%;-webkit-font-smoothing:antialiased}p{line-height:1.5rem;margin-bottom:0}p,ul,ol{margin-top:1.5rem}ul,ol{margin-bottom:1.5rem}ul li,ol li{line-height:1.5rem}ul ul,ol ul,ul ol,ol ol{margin-top:0;margin-bottom:0}blockquote{line-height:1.5rem;margin-top:1.5rem;margin-bottom:1.5rem}h1,h2,h3,h4,h5,h6{font-family:sans-serif;margin-bottom:0}h3,h4,h5,h6{margin-top:1.5rem;line-height:1.5rem}h1{font-size:4.242rem;line-height:4.5rem}h1,h2{margin-top:3rem}h2{font-size:2.828rem;line-height:3rem}h3{font-size:1.414rem}h4{font-size:.707rem}h5{font-size:.4713333333333333rem}h6{font-size:.3535rem}table{margin-top:1.5rem;border-spacing:0;border-collapse:collapse}table td,table th{padding:0;line-height:33px}code{vertical-align:bottom}.lead{font-size:1.414rem}.hug{margin-top:0}
     {% include custom/screen.css %}
-    body>header h1, .heading, body>header h1, h1, h2, h3, h4, h5, h6 {
-      font-style: normal;
-      font-weight: 600;
-    }
-    strong {
-      font-weight: 600;
-    }
-    .serif, body, #content .blog-index a[rel="full-article"] {
-      font-weight: 300;
-    }
-    .sans, body>header h2, body>nav form .search, body>nav a, article header p.meta, article>footer, #content .blog-index footer, html .gist .gist-file .gist-meta, #blog-archives a.category, #blog-archives time, aside.sidebar section, body>footer {
-      font-weight: 400;
-      font-style: normal;
-    }
   </style>
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   {% include custom/head.html %}
-  <script src="{{ root_url }}/javascripts/alexsexton.build-20180422.js" async></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-87SBMV7WZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-87SBMV7WZX');
+</script>
 </head>

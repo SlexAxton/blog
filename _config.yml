@@ -23,7 +23,6 @@ author: Alex Sexton
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
   Alex Sexton is a software engineer living in Austin, TX
-subtitle: Web Hacking. JavaScript.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://alexsexton.com
 twitter_username: slexaxton
@@ -81,13 +80,6 @@ github_user: slexaxton
 github_repo_count: 3
 github_show_profile_link: true
 github_skip_forks: true
-
-# Twitter
-twitter_user: slexaxton
-twitter_show_replies: false
-twitter_follow_button: true
-twitter_show_follower_count: true
-twitter_tweet_button: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-406505-7
