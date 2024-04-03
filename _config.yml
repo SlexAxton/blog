@@ -40,7 +40,8 @@ plugins:
 root: /
 permalink: /blog/:year/:month/:title/
 code_dir: downloads/code
-category_dir: blog/categories
+category_dir: false
+
 # markdown: rdiscount
 # rdiscount:
 #   extensions:
@@ -51,10 +52,7 @@ pygments: false # default python pygments have been replaced by pygments.rb
 
 pagination:  
   # Site-wide kill switch, disabled here it doesn't run at all 
-  enabled: true
-  per_page: 5
-  permalink: '/blog/page/:num/'
-  sort_reverse: true
+  enabled: false
 
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
@@ -63,7 +61,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/gravatar.html, asides/twitter.html, asides/recent_posts.html]
+default_asides: []
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -74,15 +72,6 @@ default_asides: [asides/gravatar.html, asides/twitter.html, asides/recent_posts.
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
-
-# Github repositories
-github_user: slexaxton
-github_repo_count: 3
-github_show_profile_link: true
-github_skip_forks: true
-
-# Google Analytics
-google_analytics_tracking_id: UA-406505-7
 
 # Facebook Like
 facebook_like: false
