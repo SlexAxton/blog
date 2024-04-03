@@ -36,6 +36,7 @@ h1, .entry-title {
 }
 
 .entry-content ul {
+    padding-left: 16px;
     margin-top: 32px;
     list-style-type: disc;
 }
@@ -50,6 +51,10 @@ h2 {
     margin-top: 42px;
     font-size: 32px;
     line-height: 42px;
+}
+h3 + :is(.entry-content p),
+h2 + :is(.entry-content p) {
+    margin-top: 16px;
 }
 h3 {
     margin-top: 28px;
