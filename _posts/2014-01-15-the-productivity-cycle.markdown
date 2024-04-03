@@ -11,19 +11,6 @@ People are interesting. We know so little about ourselves compared to what we'd 
 
 I'd like to take the chance, while we're still mostly clueless, to write some of my non-scientific theories on cognitive ability and "focus" (the noun) in the context of creating and building things (or "shipping," as it were).
 
-## Motive and Privilege
-
-I see a thin thread woven through everything that I do, and everything that I see my peers do.
-
-**Legacy.**
-
-We're all creative, and many of us want to "build things." I hear it often in interviews, and over beers, that it's just built into the core of many of us to want to "create something from nothing." It often takes shape as some other pleasant-sounding turn of phrase, but the "need to create" seems to be innate in all but the most blissful of us. In my experience, this can often be traced back to the desire for someone to 'make their mark,' or as I previously alluded, the desire to pursue a legacy.
-
-I'm all for this. This feeling is built in to my DNA as well. And while I would hope to have purely selfless reasons for wanting to create things, I'm certain that my ego, and my human-nature drive me to want to live longer than my bones.
-
-I can't help but lead with "ego" and "legacy" because the entire ability to create something from nothing (programming) and to get disproportionally rewarded for doing so (programming salaries) comes along with more than a touch of blind privilege. It's a pretty good spot to be in to be hacking your mental focus levels so you can build bigger and better websites. Blindness to our privilege is mostly to be expected as long as we fight to improve our own awareness and adjust our actions appropriately. Read on now, forewarned of my ego, blindness to privilege, and extreme lack of brevity.
-
-
 ## Caffeine is a Zero-Sum Game
 
 ![/images/prod_cycle/focuswave.png](/images/prod_cycle/focuswave.png)
