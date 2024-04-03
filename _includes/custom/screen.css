@@ -8,6 +8,8 @@ body {
 
 #main {
     max-width: 680px;
+    padding-right: 16px;
+    padding-left: 16px;
     margin: 0 auto;
 }
 
@@ -76,6 +78,8 @@ body > footer {
     font-size: 14px; 
     max-width: 680px;
     color: #454545;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
 a[href] {
