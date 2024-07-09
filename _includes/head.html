@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{% if page.title %}{% if page.title != "" %}{{ page.title }} - {% endif %}{% endif %}{{ site.title }}</title>
-  <meta name="author" content="{{ site.author }}">
-  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
-  <meta name="description" content="Alex Sexton lives in Austin, TX and works as a software engineer at Stripe.">
-  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
-  <link rel="canonical" href="{{ canonical }}">
-  <link href="{{ root_url }}/favicon.ico" rel="icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-  <style type="text/css">
-    {% include custom/screen.css %}
-  </style>
-  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
-  {% include custom/head.html %}
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-87SBMV7WZX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {% if page.title %}{% if page.title != "" %}{{ page.title }} - {% endif
+      %}{% endif %}{{ site.title }}
+    </title>
+    <meta name="author" content="{{ site.author }}" />
+    {% capture description %}{% if page.description %}{{ page.description }}{%
+    else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+    <meta
+      name="description"
+      content="Alex Sexton lives in Austin, TX and works as a software engineer at Pierre.co."
+    />
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html'
+    %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash
+    }}{% endif %}{% endcapture %}
+    <link rel="canonical" href="{{ canonical }}" />
+    <link href="{{ root_url }}/favicon.ico" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      {% include custom/screen.css %}
+    </style>
+    <link
+      href="{{ site.subscribe_rss }}"
+      rel="alternate"
+      title="{{site.title}}"
+      type="application/atom+xml"
+    />
+    {% include custom/head.html %}
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-87SBMV7WZX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-87SBMV7WZX');
-</script>
-</head>
+      gtag("config", "G-87SBMV7WZX");
+    </script>
+  </head>
+</html>
